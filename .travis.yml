@@ -2,5 +2,5 @@ language: swift
 xcode_project: helloworld/helloworld.xcodeproj
 xcode_scheme: helloworldTests
 
-before_script:
-  - bundle exec danger
+# before_script:
+# - bundle exec danger
