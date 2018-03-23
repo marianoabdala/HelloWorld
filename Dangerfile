@@ -8,8 +8,9 @@ warn("Big PR") if git.lines_of_code > 500
 swiftlint.lint_files inline_mode: true
 
 # Warn when library files has been updated but not tests.
-has_app_changes = !git.modified_files.grep(/Sources/).empty?
-tests_updated = !git.modified_files.grep(/Tests/).empty?
+has_app_changes = !git.modified_files.grep(/helloworld/helloworld/).empty?
+tests_updated = !git.modified_files.grep(/helloworld/helloworldTests/).empty?
+
 if has_app_changes && !tests_updated
   warn("The library files were changed, but the tests remained unmodified. Consider updating or adding to the tests to match the library changes.")
 end
